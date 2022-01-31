@@ -7,7 +7,7 @@ public class BulletController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] float bulletSpeed = 5f;
     [SerializeField] int bulletDamage = 20;
-    [SerializeField] direccionBullet = Vector3;
+    [SerializeField] Vector3 direccion = new Vector3(0, 0, 0);
     void Start()
     {
         
