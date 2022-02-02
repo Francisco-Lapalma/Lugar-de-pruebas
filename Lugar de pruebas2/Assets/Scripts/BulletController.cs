@@ -10,17 +10,22 @@ public class BulletController : MonoBehaviour
     [SerializeField] Vector3 direccion = new Vector3(0, 0, 0);
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveBullet(Vector3.right);
+        if (transform.position.x > 35f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void MoveBullet(Vector3 direccion)
     {
         transform.position += bulletSpeed * Time.deltaTime * direccion;
     }
+
 }
